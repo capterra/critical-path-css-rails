@@ -8,7 +8,7 @@ module CriticalPathCss
         config['css_path'] = "#{::Rails.root}/public" + (
             config['css_path'] ||
               ActionController::Base.helpers.stylesheet_path(
-                config['manifest_name']
+                config['manifest_name'], host: ''
               )
         )
         config
